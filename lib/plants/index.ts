@@ -1,11 +1,14 @@
 import { bambaraNut } from "./bambara-nut";
 import { basil } from "./basil";
+import { beetroot } from "./beetroot";
 import { cassava } from "./cassava";
 import { cowpea } from "./cowpea";
 import { cucumber } from "./cucumber";
 import { egusi } from "./egusi";
 import { ewedu } from "./ewedu";
 import { flutedPumpkin } from "./fluted-pumpkin";
+import { ginger } from "./ginger";
+import { irishPotato } from "./irish-potato";
 import { lavender } from "./lavender";
 import { maize } from "./maize";
 import { ogbono } from "./ogbono";
@@ -15,7 +18,9 @@ import { peppers } from "./peppers";
 import { rosemary } from "./rosemary";
 import { soybean } from "./soybean";
 import { spearmint } from "./spearmint";
+import { sweetPotato } from "./sweet-potato";
 import { tomato } from "./tomato";
+import { turmeric } from "./turmeric";
 import type { Plant } from "./types";
 import { yam } from "./yam";
 
@@ -43,6 +48,11 @@ export const plants: Plant[] = [
   cowpea,
   bambaraNut,
   soybean,
+  sweetPotato,
+  irishPotato,
+  beetroot,
+  ginger,
+  turmeric,
 ];
 
 export const featuredPlants = plants.filter((plant) => plant.featured);

@@ -90,6 +90,7 @@ export default async function PlantPage({ params }: PlantPageProps) {
             {leadImage ? (
               <PlantImage
                 image={leadImage}
+                loading="eager"
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
                 className="aspect-[4/3] rounded-[1.75rem] ring-1 ring-hairline"
@@ -120,6 +121,7 @@ export default async function PlantPage({ params }: PlantPageProps) {
                   <li key={image.src}>
                     <PlantImage
                       image={image}
+                      loading="eager"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="aspect-[4/3] rounded-[1.5rem] ring-1 ring-hairline"
                     />

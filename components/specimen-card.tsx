@@ -28,6 +28,7 @@ const leadImage = plant.images?.[0];
         {leadImage ? (
           <PlantImage
             image={leadImage}
+            loading="eager"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="mb-5 aspect-[4/3] rounded-[calc(1.75rem-0.375rem)]"
           />

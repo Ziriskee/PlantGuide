@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Instrument_Sans } from "next/font/google";
 import "./globals.css";
+import { ScrollReset } from "@/components/scroll-reset";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable}`}
     >
       <body>
+        <ScrollReset />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         {children}
         <div className="grain" aria-hidden="true" />

@@ -9,6 +9,8 @@ type PlantImageProps = {
   image: PlantImageRecord;
   /** Wrapper classes: aspect ratio, rounding, ring. */
   className?: string;
+  /** "eager" for the lead image, "lazy" for all others. */
+  loading: "eager" | "lazy";
   sizes: string;
   priority?: boolean;
 };
@@ -22,6 +24,7 @@ type PlantImageProps = {
 export function PlantImage({
   image,
   className,
+  loading,
   sizes,
   priority = false,
 }: PlantImageProps) {
@@ -62,6 +65,7 @@ export function PlantImage({
             src={attempt > 0 ? `${image.src}?retry=${attempt}` : image.src}
             alt={image.alt || ""}
             fill
+            loading="eager"
             sizes={sizes}
             priority={priority}
             onLoad={() => setStatus("loaded")}
